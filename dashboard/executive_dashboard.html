@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collections Recovery Dashboard</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f7f9;color:#222}
+.wrap{max-width:1050px;margin:0 auto;padding:28px}
+h1{font-size:26px;margin:0 0 6px} h2{font-size:18px;margin:0 0 14px}
+p{line-height:1.45} .muted{color:#666;font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.card,.box{background:white;border:1px solid #ddd;border-radius:8px;padding:16px}
+.card b{display:block;font-size:13px;color:#555;margin-bottom:8px}
+.big{font-size:25px;font-weight:700}
+.grid{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:9px 7px;border-bottom:1px solid #eee;text-align:right}
+th:first-child,td:first-child{text-align:left}
+.note{border-left:4px solid #555;padding:10px 14px;background:#fafafa}
+ul{padding-left:20px;line-height:1.55}
+.bar{fill:#666}
+svg{width:100%;height:auto;background:#fff;border:1px solid #eee;border-radius:6px}
+@media(max-width:800px){.cards,.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cards,.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Collections Recovery — Quick Dashboard</h1>
+<p class="muted">Analysis of the cleaned collections data. August is partial, so the main trend uses January–July.</p>
+
+<div class="cards">
+<div class="card"><b>Feb → Mar cash</b><span class="big">+11.11%</span></div>
+<div class="card"><b>Recovery rate change</b><span class="big">+1.38%</span></div>
+<div class="card"><b>Jan → Jul cash</b><span class="big">+0.01%</span></div>
+<div class="card"><b>Calls with borrower mismatch</b><span class="big">98.46%</span></div>
+</div>
+
+<div class="note">
+<b>Main takeaway:</b> The 11% number is real for Feb→Mar cash volume, but it does not show an 11% improvement in overall recovery performance.
+</div>
+
+<div class="grid" style="margin-top:14px">
+<div class="box">
+<h2>Cash recovered (₹M)</h2>
+<svg viewBox="0 0 760 270" role="img" aria-label="Monthly cash recovered">
+<line x1="45" y1="220" x2="735" y2="220" stroke="#bbb"/>
+<rect x="55" y="41.9" width="55" height="178.1" rx="3" class="bar"/><text x="82.5" y="242" text-anchor="middle">01</text><text x="82.5" y="34.9" text-anchor="middle">187</text><rect x="147" y="58.0" width="55" height="162.0" rx="3" class="bar"/><text x="174.5" y="242" text-anchor="middle">02</text><text x="174.5" y="51.0" text-anchor="middle">170</text><rect x="239" y="40.0" width="55" height="180.0" rx="3" class="bar"/><text x="266.5" y="242" text-anchor="middle">03</text><text x="266.5" y="33.0" text-anchor="middle">189</text><rect x="331" y="53.3" width="55" height="166.7" rx="3" class="bar"/><text x="358.5" y="242" text-anchor="middle">04</text><text x="358.5" y="46.3" text-anchor="middle">175</text><rect x="423" y="44.6" width="55" height="175.4" rx="3" class="bar"/><text x="450.5" y="242" text-anchor="middle">05</text><text x="450.5" y="37.6" text-anchor="middle">184</text><rect x="515" y="52.7" width="55" height="167.3" rx="3" class="bar"/><text x="542.5" y="242" text-anchor="middle">06</text><text x="542.5" y="45.7" text-anchor="middle">176</text><rect x="607" y="41.8" width="55" height="178.2" rx="3" class="bar"/><text x="634.5" y="242" text-anchor="middle">07</text><text x="634.5" y="34.8" text-anchor="middle">187</text>
+<text x="48" y="18" font-size="12" fill="#666">₹M</text>
+</svg>
+<p class="muted">Values are cleaned successful-payment cash. August is excluded from this chart because it is incomplete.</p>
+</div>
+
+<div class="box">
+<h2>What changed?</h2>
+<ul>
+<li>Feb cash: ₹170.3M</li>
+<li>Mar cash: ₹189.2M</li>
+<li>Recovered accounts: 2,173 → 2,419</li>
+<li>Recovery/account rate: 42.11% → 42.69%</li>
+<li>Recovery per targeted account: ₹33,000 → ₹33,390</li>
+</ul>
+</div>
+</div>
+
+<div class="box" style="margin-top:14px">
+<h2>Monthly recovery view</h2>
+<table>
+<tr><th>Month</th><th>Cash recovered</th><th>Recovered accounts</th><th>Targeted accounts</th><th>Recovery rate</th><th>Cash MoM</th></tr>
+<tr><td>2026-01</td><td>₹187.2M</td><td>2,374</td><td>5,732</td><td>41.42%</td><td></td></tr><tr><td>2026-02</td><td>₹170.3M</td><td>2,173</td><td>5,160</td><td>42.11%</td><td>-9.05%</td></tr><tr><td>2026-03</td><td>₹189.2M</td><td>2,419</td><td>5,666</td><td>42.69%</td><td>+11.11%</td></tr><tr><td>2026-04</td><td>₹175.2M</td><td>2,304</td><td>5,585</td><td>41.25%</td><td>-7.38%</td></tr><tr><td>2026-05</td><td>₹184.3M</td><td>2,344</td><td>5,800</td><td>40.41%</td><td>+5.20%</td></tr><tr><td>2026-06</td><td>₹175.9M</td><td>2,286</td><td>5,535</td><td>41.30%</td><td>-4.60%</td></tr><tr><td>2026-07</td><td>₹187.2M</td><td>2,335</td><td>5,666</td><td>41.21%</td><td>+6.48%</td></tr>
+</table>
+</div>
+
+<div class="grid" style="margin-top:14px">
+<div class="box">
+<h2>Data quality flags</h2>
+<ul>
+<li><b>98.46%</b> of calls have borrower IDs that disagree with the account borrower ID.</li>
+<li><b>92.85%</b> of PROMISE_BROKEN targets do not have a prior broken PTP event.</li>
+<li>About <b>66.7%</b> of calls have a timezone mismatch with the account.</li>
+<li>Borrower-level analysis is therefore treated as unreliable.</li>
+</ul>
+</div>
+<div class="box">
+<h2>₹10 Cr recommendation</h2>
+<p><b>Better borrower targeting</b>, but use a controlled pilot first.</p>
+<p>There is a clear targeting-quality problem, while the data does not give a strong causal case for more agents, AI voice, digital, field or telephony.</p>
+<p class="muted">A full ₹10 Cr rollout is not justified from this observational dataset alone. Test the uplift first and add cost data.</p>
+</div>
+</div>
+
+<p class="muted" style="margin-top:20px">Source: cleaned assignment dataset and analysis outputs. This dashboard is intended as a one-screen summary; detailed SQL, notebook and data-quality checks are in the repository.</p>
+</div>
+</body>
+</html>
