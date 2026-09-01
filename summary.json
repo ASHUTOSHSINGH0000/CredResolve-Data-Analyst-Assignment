@@ -1,0 +1,235 @@
+{
+  "claim": {
+    "reported_period": "2026-02 to 2026-03",
+    "raw_success_cash_mom_pct": 10.99161081383222,
+    "clean_success_cash_mom_pct": 11.105681448323512,
+    "clean_recovered_accounts_mom_pct": 11.32075471698113,
+    "targeted_accounts_mom_pct": 9.806201550387605,
+    "recovery_account_rate_mom_pct": 1.3792965654116918,
+    "recovery_per_targeted_account_mom_pct": 1.183430334159774,
+    "recovery_per_recovered_account_mom_pct": -0.19320141082801445,
+    "recovery_per_agent_hour_mom_pct": 5.378035438558193,
+    "jan_to_jul_cash_change_pct": 0.009992254004931311
+  },
+  "dq_critical": 5,
+  "dq_high": 10,
+  "target_7d_rate": 0.018333333333333333,
+  "target_7d_recovery": 62469802.309999995,
+  "annualized_target_recovery": 93704703.465,
+  "channel_performance": [
+    {
+      "recommended_channel": "FIELD",
+      "targets": 11365,
+      "paid_7d": 190,
+      "recovery_7d": 14873379.4,
+      "conversion_7d": 0.01671799384073911,
+      "avg_recovery_per_target": 1308.700343158821
+    },
+    {
+      "recommended_channel": "SMS",
+      "targets": 11221,
+      "paid_7d": 209,
+      "recovery_7d": 15101715.370000001,
+      "conversion_7d": 0.018625790927724803,
+      "avg_recovery_per_target": 1345.8439862757332
+    },
+    {
+      "recommended_channel": "VOICE",
+      "targets": 11202,
+      "paid_7d": 222,
+      "recovery_7d": 17129094.15,
+      "conversion_7d": 0.01981788966256026,
+      "avg_recovery_per_target": 1529.1103508302087
+    },
+    {
+      "recommended_channel": "WHATSAPP",
+      "targets": 11212,
+      "paid_7d": 204,
+      "recovery_7d": 15365613.39,
+      "conversion_7d": 0.018194791295041028,
+      "avg_recovery_per_target": 1370.4614154477347
+    }
+  ],
+  "vendor_perf": [
+    {
+      "vendor_id": "VND0000014",
+      "calls": 6041,
+      "answered": 1274,
+      "answer_rate": 0.21089223638470453,
+      "duration_sec": 2733981,
+      "vendor_name": "Knowlarity",
+      "vendor_account_id": "VAC547425",
+      "timezone": "Asia/Kolkata",
+      "status": "INACTIVE",
+      "schema_version": "v3"
+    },
+    {
+      "vendor_id": "VND0000006",
+      "calls": 5896,
+      "answered": 1227,
+      "answer_rate": 0.20810719131614655,
+      "duration_sec": 2658126,
+      "vendor_name": "Knowlarity",
+      "vendor_account_id": "VAC544470",
+      "timezone": "UTC",
+      "status": "ACTIVE",
+      "schema_version": "v2"
+    },
+    {
+      "vendor_id": "VND0000010",
+      "calls": 6163,
+      "answered": 1251,
+      "answer_rate": 0.20298555898101575,
+      "duration_sec": 2796342,
+      "vendor_name": "Airtel",
+      "vendor_account_id": "VAC172916",
+      "timezone": "UTC",
+      "status": "INACTIVE",
+      "schema_version": "v1"
+    },
+    {
+      "vendor_id": "VND0000013",
+      "calls": 5904,
+      "answered": 1188,
+      "answer_rate": 0.20121951219512196,
+      "duration_sec": 2677052,
+      "vendor_name": "Knowlarity",
+      "vendor_account_id": "VAC138790",
+      "timezone": "Asia/Kolkata",
+      "status": "ACTIVE",
+      "schema_version": "v1"
+    },
+    {
+      "vendor_id": "VND0000011",
+      "calls": 6072,
+      "answered": 1220,
+      "answer_rate": 0.20092226613965744,
+      "duration_sec": 2738287,
+      "vendor_name": "Airtel",
+      "vendor_account_id": "VAC461665",
+      "timezone": "UTC",
+      "status": "ACTIVE",
+      "schema_version": "v3"
+    },
+    {
+      "vendor_id": "VND0000003",
+      "calls": 5964,
+      "answered": 1188,
+      "answer_rate": 0.19919517102615694,
+      "duration_sec": 2709889,
+      "vendor_name": "Twilio",
+      "vendor_account_id": "VAC074211",
+      "timezone": "UTC",
+      "status": "INACTIVE",
+      "schema_version": "v3"
+    },
+    {
+      "vendor_id": "VND0000008",
+      "calls": 5911,
+      "answered": 1168,
+      "answer_rate": 0.19759769920487227,
+      "duration_sec": 2653282,
+      "vendor_name": "Airtel",
+      "vendor_account_id": "VAC496672",
+      "timezone": "Asia/Kolkata",
+      "status": "INACTIVE",
+      "schema_version": "v3"
+    },
+    {
+      "vendor_id": "VND0000002",
+      "calls": 5934,
+      "answered": 1168,
+      "answer_rate": 0.19683181664981464,
+      "duration_sec": 2630626,
+      "vendor_name": "Exotel",
+      "vendor_account_id": "VAC456766",
+      "timezone": "UTC",
+      "status": "INACTIVE",
+      "schema_version": "v3"
+    },
+    {
+      "vendor_id": "VND0000015",
+      "calls": 6066,
+      "answered": 1193,
+      "answer_rate": 0.19666996373227827,
+      "duration_sec": 2758342,
+      "vendor_name": "TataTele",
+      "vendor_account_id": "VAC225367",
+      "timezone": "Asia/Kolkata",
+      "status": "ACTIVE",
+      "schema_version": "v2"
+    },
+    {
+      "vendor_id": "VND0000004",
+      "calls": 5925,
+      "answered": 1156,
+      "answer_rate": 0.1951054852320675,
+      "duration_sec": 2669623,
+      "vendor_name": "Twilio",
+      "vendor_account_id": "VAC321507",
+      "timezone": "UTC",
+      "status": "ACTIVE",
+      "schema_version": "v1"
+    },
+    {
+      "vendor_id": "VND0000005",
+      "calls": 6048,
+      "answered": 1179,
+      "answer_rate": 0.1949404761904762,
+      "duration_sec": 2740234,
+      "vendor_name": "Twilio",
+      "vendor_account_id": "VAC976733",
+      "timezone": "Asia/Kolkata",
+      "status": "ACTIVE",
+      "schema_version": "v1"
+    },
+    {
+      "vendor_id": "VND0000007",
+      "calls": 6069,
+      "answered": 1179,
+      "answer_rate": 0.19426594167078595,
+      "duration_sec": 2710086,
+      "vendor_name": "TataTele",
+      "vendor_account_id": "VAC997592",
+      "timezone": "UTC",
+      "status": "INACTIVE",
+      "schema_version": "v1"
+    },
+    {
+      "vendor_id": "VND0000012",
+      "calls": 6010,
+      "answered": 1167,
+      "answer_rate": 0.1941763727121464,
+      "duration_sec": 2716781,
+      "vendor_name": "Airtel",
+      "vendor_account_id": "VAC583104",
+      "timezone": "UTC",
+      "status": "INACTIVE",
+      "schema_version": "v1"
+    },
+    {
+      "vendor_id": "VND0000001",
+      "calls": 6025,
+      "answered": 1168,
+      "answer_rate": 0.19385892116182574,
+      "duration_sec": 2706406,
+      "vendor_name": "Airtel",
+      "vendor_account_id": "VAC342762",
+      "timezone": "Asia/Kolkata",
+      "status": "INACTIVE",
+      "schema_version": "v3"
+    },
+    {
+      "vendor_id": "VND0000009",
+      "calls": 5972,
+      "answered": 1154,
+      "answer_rate": 0.19323509711989284,
+      "duration_sec": 2693781,
+      "vendor_name": "Exotel",
+      "vendor_account_id": "VAC382568",
+      "timezone": "Asia/Kolkata",
+      "status": "INACTIVE",
+      "schema_version": "v1"
+    }
+  ]
+}

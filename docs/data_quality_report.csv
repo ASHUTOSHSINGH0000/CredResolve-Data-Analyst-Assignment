@@ -1,0 +1,19 @@
+issue_id,area,severity,detected_count,treatment,business_impact
+DQ01,Borrower entity resolution,CRITICAL,28151,Do not use borrower_id as a dimension; join operational events to accounts by account_id and label borrower link status.,"Only 5,946/30,000 accounts map to exactly one borrower row; borrower-level geography/contact analysis is not reliable."
+DQ02,Borrower exact duplicates,HIGH,600,Exact-deduplicate borrower master for profiling only; retain audit flag.,600 redundant master rows.
+DQ03,Account borrower linkage,CRITICAL,2913,Treat missing/invalid borrower links as unresolved.,"2,913/30,000 accounts (9.71%) lack a valid borrower master link; 21,141 are ambiguous."
+DQ04,Calls duplicate rows,HIGH,1271,Exact-deduplicate calls; for 11 conflicting call IDs retain latest event_at and flag.,"1,271 exact duplicate rows + 11 conflicting IDs."
+DQ05,Payment duplicate events,HIGH,486,Exact-deduplicate payment event signature; do not deduplicate globally on payment_reference because references repeat across accounts.,486 duplicate rows removed; March clean cash remains +11.11% MoM.
+DQ06,WhatsApp duplicates,HIGH,600,Exact-deduplicate event rows.,600 duplicate event rows.
+DQ07,Event borrower mismatch,CRITICAL,89939,Ignore event-table borrower_id for account-level analytics; use account_id.,98.46% of calls disagree with accounts.borrower_id; similar mismatch appears across all event tables.
+DQ08,Call agent missing,MEDIUM,1827,Keep null agent; exclude from agent-level attribution and quantify coverage.,"1,827 calls cannot be attributed to an agent."
+DQ09,Call-attempt vendor missing,MEDIUM,2400,Keep null vendor; exclude from vendor comparisons.,"2,400 call attempts have no vendor_id."
+DQ10,Payment reference missing,MEDIUM,382,Use payment_id + event signature as transaction key.,382 payment events have no payment_reference.
+DQ11,Call timezone vs account timezone,HIGH,60012,Use account timezone as borrower-local reporting timezone only where explicitly supported; retain raw timezone and mismatch flag.,~66.7% of deduped calls disagree with account timezone; hour-of-day comparisons are not trustworthy without a timezone contract.
+DQ12,Call timezone vs vendor timezone,HIGH,60028,Do not infer local call hour from vendor timezone; vendor and event timezone fields disagree frequently.,"60,961 raw call rows have timezone mismatch with vendor master."
+DQ13,Status timestamp semantics,HIGH,30191,Do not use recorded_at as causal event order without timezone normalization; use event_at for business time and keep recorded_at as ingestion audit field.,"30,191 status records have recorded_at earlier than event_at in naive timestamps."
+DQ14,Agent employee_code non-unique,HIGH,1099,Use agent_id as operational key; treat employee_code as non-key attribute.,"All 1,099 employee_code values map to multiple agent_ids."
+DQ15,Target definition mismatch,CRITICAL,8376,"For PROMISE_BROKEN targeting, require a prior broken PTP event; redesign target eligibility logic.","8,376/9,021 PROMISE_BROKEN targets (92.85%) have no prior broken PTP event."
+DQ16,No cost data,CRITICAL,1,Add cost ledger by channel/vendor/agent-hour and fixed investment cost.,Cannot calculate observed cost per ₹ recovered or defensible ROI from source data alone.
+DQ17,Missing requested dimensions,HIGH,1,"Add client, language, borrower segment and historical DPD/balance snapshots.",Those requested drivers cannot be analyzed reliably from current schema.
+DQ18,No clean strategy treatment date,HIGH,1,Run randomized holdout or record immutable strategy_assignment_at.,Strategy versions coexist across the entire observed period; causal counterfactual is not identified.

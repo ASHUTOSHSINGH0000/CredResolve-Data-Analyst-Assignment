@@ -1,0 +1,12 @@
+{
+  "reported_period": "2026-02 to 2026-03",
+  "raw_success_cash_mom_pct": 10.99161081383222,
+  "clean_success_cash_mom_pct": 11.105681448323512,
+  "clean_recovered_accounts_mom_pct": 11.32075471698113,
+  "targeted_accounts_mom_pct": 9.806201550387605,
+  "recovery_account_rate_mom_pct": 1.3792965654116918,
+  "recovery_per_targeted_account_mom_pct": 1.183430334159774,
+  "recovery_per_recovered_account_mom_pct": -0.19320141082801445,
+  "recovery_per_agent_hour_mom_pct": 5.378035438558193,
+  "jan_to_jul_cash_change_pct": 0.009992254004931311
+}
